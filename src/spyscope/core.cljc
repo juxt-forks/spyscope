@@ -82,6 +82,13 @@
                 " => " value-string)
      :frame1 (str (first frames-base))}))
 
+(defn console-log
+  "Reader function to console log a form's value in CLJS and pprint in CLJ."
+  [form]
+  `(macrovich/case
+    :clj  (doto ~form pp/cprint)
+    :cljs (doto ~form js/console.log)))
+
 (defn print-log
   "Reader function to pprint a form's value."
   [form]

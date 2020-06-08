@@ -3,6 +3,10 @@
             [spyscope.core]
             [spyscope.repl]))
 
+(deftest console-log-test
+  (is (= "6\n"
+         (with-out-str #spy/c (+ 1 2 3)))))
+
 (deftest print-log-test
   (is (= "6\n"
          (with-out-str #spy/p (+ 1 2 3)))))

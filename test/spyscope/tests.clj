@@ -6,9 +6,14 @@
             [spyscope.repl]))
 
 (set! *data-readers*
-  {'spy/p spyscope.core/print-log
-   'spy/d spyscope.core/print-log-detailed
-   'spy/t spyscope.core/trace})
+      {'spy/c spyscope.core/console-log
+       'spy/p spyscope.core/print-log
+       'spy/d spyscope.core/print-log-detailed
+       'spy/t spyscope.core/trace})
+
+(deftest console-log-test
+  (is (= (str (puget/cprint-str 6) "\n")
+         (with-out-str #spy/p (+ 1 2 3)))))
 
 (deftest print-log-test
   (is (= (str (puget/cprint-str 6) "\n")
