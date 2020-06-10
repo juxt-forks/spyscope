@@ -48,6 +48,10 @@ spyscope.repl=> (take 20 (repeat #spy/p (+ 1 2 3)))
 `#spy/p` is an extremely simple tool that merely saves a few keystores when
 one needs to dump out a value in the middle of a calculation.
 
+### `#spy/c`
+
+In Clojure just like `#spy/p` in CLJS, `js/console.log`
+
 ### `#spy/d`
 
 Next, let's look at `#spy/d`. This is where the real power lies:
@@ -238,6 +242,10 @@ user$eval35822$my_best_fn__35823.invoke(NO_SOURCE_FILE:1) => 30
 nil
 user=> 
 ```
+
+### `#spy/tap>` or `#spy/>`
+
+Same as `tap>` in clojure.core and cljs.core.
 
 ## Contributors
 
