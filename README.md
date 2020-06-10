@@ -38,7 +38,7 @@ to get the reader tags working. Using a `~/.boot/profile.boot` file:
 ## Usage
 
 Spyscope includes 3 reader tools for debugging your Clojure code, which are exposed as reader tags:
-`#spy/p`, `#spy/d`, and `#spy/t`, which stand for *print*, *details*, and *trace*, respectively.
+`#spy/p`, `#spy/d`, `#spy/t`, `#spy/c` and `#spy/>` and `#spy/tap>` which stand for *print*, *details*, *trace*, *console.log* (in CLJS, *print* in Clojure) and *`tap>`* respectively.
 Reader tags were chosen because they allow one to use Spyscope by only writing 6 characters, and
 since they exist only to the left of the form one wants to debug, they require the fewest possible
 keystrokes, optimizing for developer happiness. :)
@@ -59,6 +59,10 @@ one needs to dump out a value in the middle of a calculation.
 ### `#spy/c`
 
 In Clojure just like `#spy/p` in CLJS, `js/console.log`
+
+### `#spy/tap>` or `#spy/>`
+
+Same as `tap>` in clojure.core and cljs.core.
 
 ### `#spy/d`
 
@@ -250,10 +254,6 @@ user$eval35822$my_best_fn__35823.invoke(NO_SOURCE_FILE:1) => 30
 nil
 user=> 
 ```
-
-### `#spy/tap>` or `#spy/>`
-
-Same as `tap>` in clojure.core and cljs.core.
 
 ## Contributors
 
