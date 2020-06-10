@@ -10,7 +10,7 @@ A Clojure(Script) library designed to make it easy to debug single- and multi-th
 
 ```clojure
   spyscope {:git/url "https://github.com/den1k/spyscope"
-            :sha "a7af505ab4bdbc05a6a8d6b494b64337e28cdb6a"}
+            :sha "<commit hash>"}
 ```
 
 #### Leiningen
