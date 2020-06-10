@@ -4,6 +4,14 @@ A Clojure(Script) library designed to make it easy to debug single- and multi-th
 
 ## Installation
 
+> **WARNING** - Not released on Clojars. New features (since the fork) will only work in tools.deps via git deps or lein checkouts.
+
+#### tools.deps
+
+```clojure
+  spyscope {:git/url "https://github.com/den1k/spyscope"
+            :sha "a7af505ab4bdbc05a6a8d6b494b64337e28cdb6a"}
+```
 
 #### Leiningen
 
