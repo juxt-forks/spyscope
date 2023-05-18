@@ -110,7 +110,7 @@
                                         ::form (list 'quote form)))]
      (when ~(::print? (meta form))
        (macrovich/case
-        :clj (print (str (:message value#) "\n"))
+        :clj (println (str (:message value#)))
         :cljs (print (str (:message value#)))))
      ((macrovich/case :clj send-off :cljs swap!) trace-storage
       (fn [{g# :generation t# :trace :as storage#}]
