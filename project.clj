@@ -14,7 +14,7 @@
                  [com.andrewmcveigh/cljs-time "0.5.2"]
                  [net.cgrand/macrovich "0.2.1"]
                  [mvxcvi/puget "1.0.2" :exclusions [brandonbloom/fipp]]
-                 [bigml/fipp "0.6.8"]]
+                 [fipp/fipp "0.6.29"]]
 
 
   :plugins [[lein-cljsbuild "1.1.7"]
